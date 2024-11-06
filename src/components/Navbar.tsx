@@ -10,7 +10,7 @@ const Navbar = () => {
         سامانه مقایسه و خرید آنلاین
       </p>
       <p className="font-medium text-black">
-        {router.pathname === "/" ? "ثبت نام" : ""}
+        {router.pathname === "/" ? "ثبت نام" : localStorage.getItem("userInfo")}
       </p>
     </nav>
   );

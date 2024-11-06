@@ -22,6 +22,7 @@
   }
 }
 body {
+  @apply h-full;
   direction: rtl;
   color: var(--foreground);
   background: var(--background);

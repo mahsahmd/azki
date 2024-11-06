@@ -1,6 +1,4 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +8,8 @@ const config: Config = {
     extend: {
       colors: {
         secondary: "#fffbeb",
+        inputBorder: "##dfdfdf",
+        mainGreen: "#2bb69a",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
