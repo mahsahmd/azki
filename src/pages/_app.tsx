@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+import { Layout } from "@/components";
 import { FetcherProvider } from "@/queries";
 import "@/styles/index.scss";
 

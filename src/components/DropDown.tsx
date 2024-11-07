@@ -8,7 +8,7 @@ type DropdownProperties = {
   placeholder: string;
   name: string;
 };
-const Dropdown = ({
+export const Dropdown = ({
   options,
   value,
   onChange,
@@ -47,7 +47,7 @@ const Dropdown = ({
           />
         </svg>
         {isOpen && (
-          <div className="absolute right-0 top-10  z-10 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="max-h-36 overflow-y-auto absolute right-0 top-10  z-10 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="py-1">
               {Array.isArray(options) &&
                 options?.map((item) => (
@@ -71,5 +71,3 @@ const Dropdown = ({
     </>
   );
 };
-
-export default Dropdown;

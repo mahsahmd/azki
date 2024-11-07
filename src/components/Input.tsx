@@ -62,7 +62,7 @@ const getSchema = (name: NameType, placeholder: string) => {
       break;
   }
 };
-const Input: React.FC<InputProps> = ({
+export const Input: React.FC<InputProps> = ({
   placeholder,
   name,
   type = "text",
@@ -100,5 +100,3 @@ const Input: React.FC<InputProps> = ({
     </div>
   );
 };
-
-export default Input;

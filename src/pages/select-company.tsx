@@ -1,5 +1,4 @@
-import { Button } from "@/components/Button";
-import Dropdown from "@/components/DropDown";
+import { Button, Dropdown } from "@/components";
 import { useGetCompanies } from "@/queries";
 import { useRouter } from "next/router";
 import { useCallback, useState } from "react";

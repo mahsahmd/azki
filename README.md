@@ -1,41 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Azki Test
 
-## Getting Started
+This project is a test application for Azki Insurance Company. The purpose of this app is to simulate a form-based user flow where users select various options regarding insurance types, vehicle models, and discounts. The app uses modern React technologies with state management, form validation, and API data fetching.
 
-First, run the development server:
+## Table of Contents
+
+- [Technologies](#technologies)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+
+## Technologies
+
+This project uses the following technologies:
+
+- **React**: A JavaScript library for building user interfaces.
+- **Next.js**: A React framework for building fast, server-rendered applications.
+- **React Query**: A data fetching and state management library for React.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **React Hook Form**: A library for managing form state and validation.
+- **TypeScript**: A strongly-typed superset of JavaScript.
+
+## Features
+
+The app includes the following key features:
+
+1. **Sign Up Page with Full Validation**:
+   - The user can fill out a sign-up form that includes validation for all fields using **React Hook Form**.
+   - Validation includes required fields, correct format for certain inputs, and conditional field checks.
+2. **Insurance Type Selection**:
+
+   - The user selects the type of insurance they want (Third Party, Comprehensive, etc.)
+
+3. **Vehicle Type and Model Selection**:
+   - After selecting the insurance type, the user selects their vehicle type and model from dynamically loaded options based on the selected insurance type.
+4. **Insurance Company Selection**:
+
+   - The user selects their previous insurance company .
+
+5. **Discount Selection**:
+   - The user selects discount percentages for both third-party insurance and driver accident coverage.
+   - After completing the selections, a **modal** displays a summary of all selected fields (insurance type, vehicle model, insurance company, and discounts).
+
+## Installation
+
+To run this project locally, follow these steps:
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/azki-insurance-test.git
+cd azki-insurance-test
+```
+
+### 2. Install dependencies:
+
+```bash
+npm install
+# or if you're using yarn
+yarn install
+```
+
+### 3. Run the development server:
 
 ```bash
 npm run dev
-# or
+# or with yarn
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Folder Structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Here’s an overview of the project’s folder structure:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
-# azki
+```bash
+/azki-test
+├── /components              # Reusable UI components (Dropdown, Button, Modal)
+├── /assets                  # Fonts
+├── /hooks                   # Custom hooks (useInsuranceSummary, etc.)
+├── /pages                   # Page components for each step (SignUp, SelectDiscount, etc.)
+├── /queries                 # API calls with React Query
+├── /styles                  # Global styles and Tailwind configurations
+├── /public                  # Public assets like images
+├── tailwind.config.js       # Tailwind configuration
+├── next.config.js           # Next.js configuration
+├── tsconfig.json            # TypeScript configuration
+└── package.json             # Project dependencies and scripts
+```

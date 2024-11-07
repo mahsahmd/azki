@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Navbar from "./Navbar";
+import { Navbar } from "./Navbar";
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="w-full h-screen ">
       <Navbar />
@@ -27,5 +27,3 @@ const Layout = ({ children }: LayoutProps) => {
     </div>
   );
 };
-
-export default Layout;

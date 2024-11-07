@@ -28,7 +28,7 @@ export const Button = ({
       className={`${
         variant === "contained" ? "bg-mainGreen " : "border text-mainGreen"
       } min-w-28 py-2 px-4 rounded-full text-sm md:text-base ${
-        disabled ? "border-gray-300" : "border-mainGreen"
+        disabled ? "border-gray-300 opacity-50" : "border-mainGreen"
       }  ${className || ""}`}
     >
       <p

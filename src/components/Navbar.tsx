@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+export const Navbar = () => {
   const router = useRouter();
   const [user, setUser] = useState("");
 
@@ -26,5 +26,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

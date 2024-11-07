@@ -1,5 +1,4 @@
-import { Button } from "@/components/Button";
-import Input from "@/components/Input";
+import { Button, Input } from "@/components";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
@@ -21,7 +20,7 @@ export default function SignUp() {
     router.push("/select-insurance");
   };
   return (
-    <div>
+    <div className="w-full">
       <p className="text-black md:font-bold font-medium text-xl text-center md:text-start w-full">
         ثبت نام
       </p>
