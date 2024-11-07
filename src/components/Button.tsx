@@ -8,7 +8,7 @@ type Button = {
   className?: string;
   isBackButton?: boolean;
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 };
 export const Button = ({
   type = "button",
@@ -32,9 +32,11 @@ export const Button = ({
       }  ${className || ""}`}
     >
       <p
-        className={`flex  items-center justify-between  gap-2 ${
+        className={`flex items-center gap-2 ${
           disabled ? "opacity-40 cursor-not-allowed" : ""
-        } ${isBackButton ? "flex-row-reverse" : ""} ${className || ""}`}
+        } ${isBackButton ? "flex-row-reverse" : ""} ${
+          showIcon ? " justify-between " : "justify-center"
+        } `}
       >
         {title}
         {showIcon && (

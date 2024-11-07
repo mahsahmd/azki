@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button";
 import Input from "@/components/Input";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
@@ -56,13 +57,12 @@ export default function SignUp() {
             errors={errors}
           />
         </div>
-
-        <button
+        <Button
           type="submit"
-          className="bg-mainGreen w-24 py-2 rounded-full text-sm md:text-base md:self-end self-center"
-        >
-          ثبت نام
-        </button>
+          title="ثبت نام"
+          variant="contained"
+          className="md:self-end self-center"
+        />
       </form>
     </div>
   );
