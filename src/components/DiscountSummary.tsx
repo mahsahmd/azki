@@ -10,12 +10,15 @@ export type DiscountState = {
   driver: DiscountType;
 };
 export const DiscountSummary = ({ discount }: { discount: DiscountState }) => {
-  const { company, vehicleInfo, user } = useInsuranceSummary();
+  const { company, vehicleInfo, user, insuranceType } = useInsuranceSummary();
 
   return (
     <div className="text-black flex flex-col gap-4">
       <p>
         نام : <span>{user}</span>
+      </p>
+      <p>
+        نوع بیمه : <span>{insuranceType}</span>
       </p>
       <p>
         نوع خودرو : <span>{vehicleInfo?.vehicleName}</span>

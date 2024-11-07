@@ -19,6 +19,8 @@ export default function SignUp() {
     localStorage.setItem("userInfo", `${data.name} ${data.lastName}`);
     router.push("/select-insurance");
   };
+  const hasAnyErrors = Object.keys(errors).length > 0;
+
   return (
     <div className="w-full">
       <p className="text-black md:font-bold font-medium text-xl text-center md:text-start w-full">
@@ -28,7 +30,11 @@ export default function SignUp() {
         className="flex flex-col gap-8 md:gap-6 w-full md:max-w-[600px]"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="container grid md:grid-cols-2 gap-4 md:gap-8">
+        <div
+          className={`${
+            hasAnyErrors ? "gap-0" : "gap-4 "
+          } container grid md:grid-cols-2 md:gap-8 `}
+        >
           <Input
             placeholder="نام"
             name="name"
@@ -60,7 +66,7 @@ export default function SignUp() {
           type="submit"
           title="ثبت نام"
           variant="contained"
-          className="md:self-end self-center"
+          className="md:self-end self-center z-20"
         />
       </form>
     </div>

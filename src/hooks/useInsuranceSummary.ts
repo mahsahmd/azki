@@ -42,5 +42,6 @@ export const useInsuranceSummary = () => {
     company: getSelectedCompanyInfo,
     user,
     vehicleInfo: getSelectedVehicleInfo,
+    insuranceType: router.query.insurance,
   };
 };

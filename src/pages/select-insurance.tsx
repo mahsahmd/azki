@@ -1,12 +1,30 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useCallback } from "react";
 
 export default function SelectInsurance() {
+  const router = useRouter();
+
   const insuranceTypes = [
     { key: "third_party", value: "شخص ثالث" },
     { key: "body", value: "بدنه" },
   ];
-  const router = useRouter();
+  const onGoToNextPage = useCallback(
+    (type: string) => {
+      router.push(
+        {
+          pathname: "/select-vehicle",
+          query: {
+            ...router.query,
+            insurance: type,
+          },
+        },
+        undefined,
+        { shallow: true, scroll: false }
+      );
+    },
+    [router]
+  );
   return (
     <div className="w-full ">
       <h3 className="text-black md:font-bold font-medium text-xl text-center md:text-start w-full">
@@ -24,7 +42,7 @@ export default function SelectInsurance() {
                   ? "bg-[#fafafa] opacity-30  cursor-not-allowed"
                   : ""
               }`}
-              onClick={() => router.push("/select-vehicle")}
+              onClick={() => onGoToNextPage(item.value)}
               disabled={item.key === "body"}
             >
               <Image

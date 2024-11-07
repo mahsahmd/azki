@@ -7,10 +7,10 @@ export const Navbar = () => {
   const [user, setUser] = useState("");
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && window.localStorage) {
       setUser(localStorage.getItem("userInfo") || "");
     }
-  }, []);
+  }, [router]);
   return (
     <nav className="fixed top-0 w-full flex justify-between py-5 px-10">
       <Image width={24} height={24} src="./icons/logo.svg" alt="logo" />
