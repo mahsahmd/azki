@@ -1,7 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 
+export type VehicleModel = {
+  id: number;
+  title: string;
+};
+type VehicleTypeResponse = {
+  id: number;
+  title: string;
+  usages: VehicleModel[];
+};
+
 export const useGetVehicleTypes = () => {
-  const { data, isFetching } = useQuery({
+  const { data } = useQuery<VehicleTypeResponse[]>({
     queryKey: ["vehicleTypes"],
     queryFn: async () => {
       const response = await fetch(
@@ -15,6 +25,5 @@ export const useGetVehicleTypes = () => {
   });
   return {
     data,
-    isLoading: isFetching,
   };
 };

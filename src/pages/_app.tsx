@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { FetcherProvider } from "@/provider";
+import { FetcherProvider } from "@/queries/provider";
 import "@/styles/index.scss";
 
 import type { AppProps } from "next/app";

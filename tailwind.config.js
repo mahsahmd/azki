@@ -8,7 +8,7 @@ const config = {
     extend: {
       colors: {
         secondary: "#fffbeb",
-        inputBorder: "##dfdfdf",
+        inputBorder: "#dfdfdf",
         mainGreen: "#2bb69a",
         background: "var(--background)",
         foreground: "var(--foreground)",
