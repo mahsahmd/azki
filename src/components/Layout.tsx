@@ -20,7 +20,9 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
 
         <div className="bg-secondary h-full w-full  md:max-w-80 max-h-32 md:max-h-none"></div>
-        <div className="w-full h-full mt-16 md:m-0">{children}</div>
+        <div className="w-full h-full mt-16 md:m-0 md:pr-32 md:px-0 p-4 flex flex-col items-start gap-8  md:justify-center">
+          {children}
+        </div>
       </div>
     </div>
   );

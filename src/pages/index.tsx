@@ -20,7 +20,7 @@ export default function SignUp() {
     router.push("/select-insurance");
   };
   return (
-    <div className="md:pr-32 md:px-0 p-4 w-full h-full flex flex-col items-start gap-8  md:justify-center">
+    <div>
       <p className="text-black md:font-bold font-medium text-xl text-center md:text-start w-full">
         ثبت نام
       </p>
