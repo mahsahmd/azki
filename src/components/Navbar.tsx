@@ -12,7 +12,7 @@ export const Navbar = () => {
     }
   }, []);
   return (
-    <nav className="absolute top-0 w-full flex justify-between py-5 px-10">
+    <nav className="fixed top-0 w-full flex justify-between py-5 px-10">
       <Image width={24} height={24} src="./icons/logo.svg" alt="logo" />
       <h1 className="font-medium text-black hidden md:block">
         سامانه مقایسه و خرید آنلاین

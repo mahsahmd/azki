@@ -21,8 +21,12 @@
     font-family: var(--family-sans), system-ui, sans-serif;
   }
 }
+
+html,
 body {
   @apply h-full;
+}
+body {
   direction: rtl;
   color: var(--foreground);
   background: var(--background);
